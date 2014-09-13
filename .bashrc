@@ -35,26 +35,6 @@ if [ -z "${debian_chroot:-}" ] && [ -r /etc/debian_chroot ]; then
     debian_chroot=$(cat /etc/debian_chroot)
 fi
 
-# set a fancy prompt (non-color, unless we know we "want" color)
-case "$TERM" in
-    xterm-color) color_prompt=yes;;
-esac
-
-# uncomment for a colored prompt, if the terminal has the capability; turned
-# off by default to not distract the user: the focus in a terminal window
-# should be on the output of commands, not on the prompt
-#force_color_prompt=yes
-
-if [ -n "$force_color_prompt" ]; then
-    if [ -x /usr/bin/tput ] && tput setaf 1 >&/dev/null; then
-	# We have color support; assume it's compliant with Ecma-48
-	# (ISO/IEC-6429). (Lack of such support is extremely rare, and such
-	# a case would tend to support setf rather than setaf.)
-	color_prompt=yes
-    else
-	color_prompt=
-    fi
-fi
 
 c_red='\e[31;1m'
 c_green='\e[32;1m'
@@ -62,15 +42,6 @@ c_default='\e[m'
 export PS1="\u@\h $c_green\W \$(if [ \$? != 0 ]; then echo \"$c_red\"; else echo \"$c_green\"; fi)\$ $c_default"
 unset c_red c_green c_default
 unset color_prompt force_color_prompt
-
-# If this is an xterm set the title to user@host:dir
-case "$TERM" in
-xterm*|rxvt*)
-    export PS1="\[\e]0;${debian_chroot:+($debian_chroot)}\u@\h: \w\a\]$PS1"
-    ;;
-*)
-    ;;
-esac
 
 # enable color support of ls and also add handy aliases
 if [ -x /usr/bin/dircolors ]; then
@@ -82,12 +53,17 @@ if [ -x /usr/bin/dircolors ]; then
     alias grep='grep -n --color=auto'
     alias fgrep='fgrep -n --color=auto'
     alias egrep='egrep -n --color=auto'
+else
+    alias ls='ls --show-control-chars -h'
+    alias grep='grep -n'
+    alias fgrep='fgrep -n'
+    alias egrep='egrep -n'
 fi
 
 # some more ls aliases
-alias ll='ls --show-control-chars -ahlF'
-alias la='ls --show-control-chars -Ah'
-alias l='ls --show-control-chars -CFh'
+alias ll='ls -alF'
+alias la='ls -A'
+alias l='ls -CF'
 
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
@@ -112,6 +88,7 @@ if ! shopt -oq posix; then
     . /etc/bash_completion
   fi
 fi
+
 alias clr='clear'
 alias less='/usr/share/vim/vim74/macros/less.sh'
 alias mkdir='mkdir -p -v'
@@ -119,6 +96,8 @@ alias mv='mv -i -v'
 alias rm='rm -I -v'
 alias gcc='gcc -std=c11 -Wall -pedantic'
 alias g++='g++ -std=c++11 -Wall -pedantic'
+alias clang='clang -std=c11 -Wall -pedantic'
+alias clang++='clang++ -std=c++11 -Wall -pedantic'
 alias arsync='rsync -zcvrR --delete'
 alias pgerp='pgrep -l'
 
