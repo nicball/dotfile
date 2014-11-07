@@ -36,9 +36,9 @@ if [ -z "${debian_chroot:-}" ] && [ -r /etc/debian_chroot ]; then
 fi
 
 
-c_red='\e[31;1m'
-c_green='\e[32;1m'
-c_default='\e[m'
+c_red='\[\e[31;1m\]'
+c_green='\[\e[32;1m\]'
+c_default='\[\e[m\]'
 export PS1="\u@\h $c_green\W \$(if [ \$? != 0 ]; then echo \"$c_red\"; else echo \"$c_green\"; fi)\$ $c_default"
 unset c_red c_green c_default
 unset color_prompt force_color_prompt
