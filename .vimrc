@@ -28,7 +28,7 @@ set cindent
 set autowrite
 set autoread
 set backupdir=~/.vim/backup
-set directory=~/.vim/temp
+set directory=~/.vim/temp//
 set foldmethod=syntax
 set foldlevel=3
 set nomagic
