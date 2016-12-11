@@ -24,4 +24,3 @@ export PS1="[\u@\h]\w\n\$(if [ \$? != 0 ]; then echo \"$c_red\"; else echo \"$c_
 unset c_red c_green c_default
 
 shopt -s autocd
-source /usr/share/doc/pkgfile/command-not-found.bash
