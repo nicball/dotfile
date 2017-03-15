@@ -1,13 +1,15 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
-alias less='/usr/share/vim/vim74/macros/less.sh'
+alias less='/usr/share/vim/vim80/macros/less.sh'
 alias mkdir='mkdir -p -v'
 alias mv='mv -i -v'
 alias rm='rm -I -v'
 alias pgerp='pgrep -l'
+alias l='ls --color=auto'
 alias ls='ls --color=auto'
 alias la='ls -ah --color=auto'
 alias ll='ls -lh --color=auto'
+alias fuck='git commit -am "$(curl -s http://whatthecommit.com/index.txt)"'
 
 export EDITOR=vim
 export CFLAGS="-Wall -pedantic"

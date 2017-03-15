@@ -27,9 +27,9 @@ set softtabstop=4
 set cindent
 set autowrite
 set autoread
-set backupdir=~/.vim/backup
-set directory=~/.vim/temp//
 set foldmethod=syntax
-set foldlevel=3
+set foldlevel=6
 set nomagic
 set hidden
+set backupdir=~/.vim/backup
+set directory=~/.vim/temp//
