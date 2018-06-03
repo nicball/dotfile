@@ -4,7 +4,7 @@ alias less='/usr/share/vim/vim80/macros/less.sh'
 alias mkdir='mkdir -p -v'
 alias mv='mv -i -v'
 alias rm='rm -I -v'
-alias pgerp='pgrep -l'
+alias pgrep='pgrep -l'
 alias l='ls --color=auto'
 alias ls='ls --color=auto'
 alias la='ls -ah --color=auto'
@@ -26,4 +26,9 @@ export PS1="[\u@\h]\w\n\$(if [ \$? != 0 ]; then echo \"$c_red\"; else echo \"$c_
 unset c_red c_green c_default
 
 shopt -s autocd
-source /usr/share/doc/pkgfile/command-not-found.bash
+source /etc/profile.d/cnf.sh
+
+PATH="$PATH:$(ruby -e 'print Gem.user_dir')/bin"
+PATH="$PATH:/home/sahib/.local/bin"
+
+eval "$(pandoc --bash-completion)"
