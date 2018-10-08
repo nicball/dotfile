@@ -22,3 +22,9 @@ shopt -s autocd
 source /etc/profile.d/cnf.sh
 PATH="$PATH:/home/sahib/.local/bin"
 export HISTCONTROL="ignoredups:$HISTCONTROL"
+if ! pgrep -u "$USER" ssh-agent > /dev/null; then
+    ssh-agent > ~/.ssh-agent-thing
+fi
+if [[ "$SSH_AGENT_PID" == "" ]]; then
+    eval "$(< ~/.ssh-agent-thing)"
+fi
