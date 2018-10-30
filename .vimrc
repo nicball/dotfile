@@ -1,4 +1,5 @@
 set nocompatible
+set cursorline
 set backspace=indent,eol,start
 set backup
 set history=50

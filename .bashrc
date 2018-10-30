@@ -11,8 +11,6 @@ alias la='ls -ah --color=auto'
 alias ll='ls -lh --color=auto'
 alias fuck='git commit -am "$(curl -s http://whatthecommit.com/index.txt)"'
 export EDITOR=vim
-export CFLAGS="-Wall -pedantic"
-export CPPFLAGS="-std=c++14 -Wall -pedantic"
 c_red='\[\e[31;1m\]'
 c_green='\[\e[32;1m\]'
 c_default='\[\e[m\]'
