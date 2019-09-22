@@ -90,7 +90,7 @@ type = internal/network
 interface = eno1
 interval = 3.0
 
-format-connected-padding = 2
+;format-connected-padding = 2
 format-connected-foreground = #80969b
 format-connected-background = #1e1e20
 format-connected-prefix = " "
