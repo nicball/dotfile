@@ -28,7 +28,7 @@ modules-left = i3
 modules-right = wlan eth cpu battery alsa date powermenu
 
 tray-position = right
-;tray-padding =
+tray-padding = 2
 
 cursor-click = pointer
 cursor-scroll = ns-resize
@@ -46,15 +46,15 @@ label-mode-padding = 2
 label-mode-foreground = #1e1e20
 label-mode-background = #56737a
 
-label-focused = %index%
-label-focused-background = #2c5159
-label-focused-foreground = #6b7443
-label-focused-padding = 2
-
 label-unfocused = %index%
-label-unfocused-background = #56737a
-label-unfocused-foreground = #1e1e20
+label-unfocused-background = #1c4149
+label-unfocused-foreground = #6b7443
 label-unfocused-padding = 2
+
+label-focused = %index%
+label-focused-background = #56737a
+label-focused-foreground = #1e1e20
+label-focused-padding = 2
 
 label-visible = %index%
 label-visible-background = #56737a
