@@ -16,7 +16,7 @@ set number
 set shiftwidth=4
 set tabstop=4
 set expandtab
-set softtabstop=4
+set softtabstop=0
 set autowrite
 set autoread
 set foldmethod=syntax
