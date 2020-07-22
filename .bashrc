@@ -1,6 +1,6 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
-alias less='/usr/share/vim/vim81/macros/less.sh'
+alias less='/usr/share/vim/vim82/macros/less.sh'
 alias mkdir='mkdir -p -v'
 alias mv='mv -i -v'
 alias rm='rm -I -v'
