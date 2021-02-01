@@ -42,3 +42,17 @@ endif
 let g:molokai_original = 1
 colorscheme molokai
 let &t_ut=''
+
+call plug#begin('~/.vim/vim-plug')
+" Plug 'kien/rainbow_parentheses.vim'
+    Plug 'tpope/vim-surround'
+    Plug 'tpope/vim-repeat'
+    Plug 'edwinb/idris2-vim'
+call plug#end()
+
+
+" " rainbow parentheses
+" au VimEnter * RainbowParenthesesToggle
+" au Syntax * RainbowParenthesesLoadRound
+" au Syntax * RainbowParenthesesLoadSquare
+" au Syntax * RainbowParenthesesLoadBraces

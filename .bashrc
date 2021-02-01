@@ -17,7 +17,7 @@ c_default='\[\e[m\]'
 export PS1="[\u@\h]\w\n\$(if [ \$? != 0 ]; then echo \"$c_red\"; else echo \"$c_green\"; fi)\$ $c_default"
 unset c_red c_green c_default
 source /etc/profile.d/cnf.sh
-PATH="$PATH:/home/sahib/.local/bin"
+export PATH="$PATH:/home/sahib/.local/bin"
 export HISTCONTROL="ignoredups:$HISTCONTROL"
 if ! pgrep -u "$USER" ssh-agent > /dev/null; then
     ssh-agent > ~/.ssh-agent-thing
@@ -37,3 +37,6 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 export VK_ICD_FILENAMES=/usr/share/vulkan/icd.d/nvidia_icd.json
+
+# idris2
+export PATH="$PATH:/home/sahib/.idris2/bin"
