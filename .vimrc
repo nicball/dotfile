@@ -1,3 +1,11 @@
+call plug#begin('~/.vim/vim-plug')
+" Plug 'kien/rainbow_parentheses.vim'
+    Plug 'tpope/vim-surround'
+    Plug 'tpope/vim-repeat'
+    Plug 'edwinb/idris2-vim'
+    Plug 'tomasr/molokai'
+call plug#end()
+
 set nocompatible
 set cursorline
 set backspace=indent,eol,start
@@ -42,14 +50,6 @@ endif
 let g:molokai_original = 1
 colorscheme molokai
 let &t_ut=''
-
-call plug#begin('~/.vim/vim-plug')
-" Plug 'kien/rainbow_parentheses.vim'
-    Plug 'tpope/vim-surround'
-    Plug 'tpope/vim-repeat'
-    Plug 'edwinb/idris2-vim'
-call plug#end()
-
 
 " " rainbow parentheses
 " au VimEnter * RainbowParenthesesToggle
