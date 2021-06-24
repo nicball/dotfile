@@ -23,11 +23,10 @@ font xft:URWGothic-Book 11
 
 floating_modifier $mod
 
-# start terminal emulator
 bindsym $mod+Return exec $term
-
-# start chromium
 bindsym $mod+c exec chromium
+bindsym $mod+Shift+f exec caja
+bindsym Print --release exec maim -s | xclip -selection clipboard -t image/png
 
 # Window kill command
 bindsym $mod+Shift+q kill
@@ -232,7 +231,8 @@ exec --no-startup-id clipit
 exec_always --no-startup-id ff-theme-util
 exec_always --no-startup-id fix_xcursor
 exec_always --no-startup-id /$HOME/.config/polybar/i3wmthemer_bar_launch.sh
-exec --no-startup-id ss-qt5
+# exec --no-startup-id ss-qt5
+exec --no-startup-id /home/sahib/.local/share/shadowsocksr/ssr-linux.AppImage
 
 # Theme colors
 # class        border  backgr. text    indicator child_border

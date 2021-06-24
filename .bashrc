@@ -40,3 +40,7 @@ export VK_ICD_FILENAMES=/usr/share/vulkan/icd.d/nvidia_icd.json
 
 # idris2
 export PATH="$PATH:/home/sahib/.idris2/bin"
+
+alias proxy="env 'https_proxy=http://127.0.0.1:1081' 'https_proxy=http://127.0.0.1:1081' 'socks5_proxy=socks5://127.0.0.1:1080'"
+
+export QT_QPA_PLATFORMTHEME=qt5ct
